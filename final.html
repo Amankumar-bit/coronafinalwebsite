@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="m.css"/>
     <link rel="stylesheet" href="s.css"/>
@@ -16,7 +17,7 @@
 
   <div class="loader-bg">
     <div class="loader">
-            <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; position:fixed;left:48.2vw;top:175px;color:orangered">CORONA'20</p>
+            <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; position:fixed;left:47.8vw;top:350px;color:orangered">CORONA'20</p>
 
     </div>
 
@@ -62,18 +63,18 @@
 
               <div class="grab">
                   <div><img  src="imagesandfolder\ticket.png"  style="margin-left:18px"></div>
-                 <div class="sub">GRAB THE PASSES </button></div>
+                 <div class="subo">GRAB THE PASSES</button></div>
               </div>
           
           <ul id="sidebarcontent">
-        <li style="margin-bottom: 2vh;" class="con" >HOME</li>
-        <li style="margin-bottom: 2vh;" class="con">ABOUT</li>
-        <li style="margin-bottom: 2vh;" class="con">TEAM</li>
-        <li style="margin-bottom: 2vh;" class="con">EVENTS</li>
-        <li style="margin-bottom: 2vh;" class="con">PASSES</li>
-        <li style="margin-bottom: 2vh;" class="con">SPONSERS</li>
-        <li style="margin-bottom: 2vh;" class="con">CONTACT US</li>
-        
+        <li style="margin-bottom: 2vh;" class="con"  onclick="smoothScroll(document.querySelector('#home_page'))" >HOME</li>
+        <li style="margin-bottom: 2vh;" class="con" onclick="smoothScroll(document.querySelector('#one'))" >ABOUT</li>
+        <li style="margin-bottom: 2vh;" class="con" onclick="smoothScroll(document.querySelector('.two'))" >PAST STARS</li>
+        <li style="margin-bottom: 2vh;" class="con" onclick="smoothScroll(document.querySelector('.three'))" >GLIMPSES</li>
+        <li style="margin-bottom: 2vh;" class="con" onclick="smoothScroll(document.querySelector('#four'))" >GALLARY</li>
+        <li style="margin-bottom: 2vh;" class="con" onclick="smoothScroll(document.querySelector('.five'))" >PAST STATS</li>
+        <li style="margin-bottom: 2vh;" class="con"  onclick="smoothScroll(document.querySelector('.six'))" >GOSSIPS</li>
+        <li style="margin-bottom: 2vh;" class=""  onclick="smoothScroll(document.querySelector('.upperfooter'))" >CONTACT US</li>        
         
           </ul>
           
@@ -87,7 +88,7 @@
           </div>   
 
         
-        <!-- <div class="line"></div> -->
+        
         </div>
 
 
@@ -161,7 +162,7 @@
     <!-- top area ends about us area starts-->
     
     <div id="one">
-      <h1>ABOUT CORONA</h1>
+      <h1 class="about_ani">ABOUT CORONA</h1>
       <p>We are glad to inform you that Bhagwan Parshuram Institute of Technology is organizing their annual cultural-techno management festival "CORONA'19" on 28th-29th March 2019 with the dream of spreading its wings and expanding its reach beyond previously unseen levels of events.
          Over the years the festival has attracted students from B.tech, BBA, BCA, MBA and various other streams to showcase their creative skills and compete amongst the best from the educational institutes of Delhi and NCR Region.
          CORONA is a festival comprising of a big chain of events under following categories:-
@@ -196,33 +197,43 @@
     </div>
   <div class="parallax1"></div>
    <div class="two">
-      <h1>PAST STARS</h1>
+      <h1  class="past_ani">PAST STARS</h1 >
       <h2>Here are some of the amazing artists we had over the years</h2>
-       <div class="subtwo">
-         <div class="s1">
+       <div class="subtwo"id="card" >
+         <div class="s1" id="content">
             <div class="subs1">
                 <img src="imagesandfolder/SUKHE.jpeg"/>
             </div>
-            <h1> SUKH-E</h1>
-            <h2> The Muziical Doctorz</h2>
-            <h3> PUNJABI NIGHT</h3>
-
+            <div class="sub">
+              <h1>SUKH-E</h1>
+              <h2>The musical doctors </h2>
+              <h3>PUNJABI NIGHT</h3>
+            </div>
+            <div class="back">
+              <video src="imagesandfolder\sukhe.mp4" controls="controls" style="height:55vh; width: 23vw;"
+              autoplay loop muted>  </video>
+              </div>
          </div>
-         <div class="s2">
+         <div class="s2" id="content1">
           <div class="subs2">
             <img src="imagesandfolder/OLLY.jpeg"/>
           </div>
+          <div class="sub1">
           <h1> OLLY ESSE</h1>
           <h2> Dj In The House</h2>
           <h3> EDM NIGHT</h3>
-
+          </div>
+          <div class="back1">
+            <video src="imagesandfolder\00030.mp4" controls="controls" style="height:55vh; width: 23vw;"
+            autoplay loop muted>  </video>
+            </div>
          </div>
 
        </div>
    </div>
    <div class="parallax2"></div>
    <div class="three">
-    <h1>SOME GLIMPSES FROM PAST</h1>
+    <h1 class="glimpses_ani">SOME GLIMPSES FROM PAST</h1>
      <div class="threes1">
       <img src="imagesandfolder/d.jpeg"/>
      </div>
@@ -248,40 +259,40 @@
    </div>
    <div class="parallax3"></div>
    <div id="four">
-     <h1>HIGHLIGHTS</h1>
+     <h1 class="highlights_ani">HIGHLIGHTS</h1>
      <h2>Here's a glimpse at some of the Major Highlights of Corona!</h2>
 
        <div class="f">
               <div class="f1">
-                <div class="topf1">
+                <div class="topf1"><div id="overlay"></div>
                   <img src="imagesandfolder/img1.jpeg"/>
 
                 </div>
-                <div class="bottomf1">
+                <div class="bottomf1"><div id="overlay"></div>
                   <img src="imagesandfolder/img7.jpeg"/>
 
                 </div>
               </div>
            <div class="f2">
-               <div class="topf2">
+               <div class="topf2"><div id="overlay"></div>
                 <img src="imagesandfolder/img11.jpeg"/>
 
                </div>
-               <div class="bottomf2">
+               <div class="bottomf2"><div id="overlay"></div>
                 <img src="imagesandfolder/img8.jpeg"/>
 
                </div>
             </div>
            <div class="f3">
-            <div class="topf3">
+            <div class="topf3"><div id="overlay"></div>
               <img src="imagesandfolder/img5.jpeg"/>
 
             </div>
-            <div class="bottomf3">
+            <div class="bottomf3"><div id="overlay"></div>
               <img src="imagesandfolder/img6.jpeg"/>
 
             </div>
-<h1 onclick="SeeMore()" id="btnSeeMore_1">See more</h1>       
+<button onclick="SeeMore()" id="btnSeeMore_1">Show More</button>       
           </div>  
 
             <h3 id="dots">...</h3>
@@ -293,34 +304,34 @@
        <!-- hidden Images  -->
 <div id="divToShow" style="width: 100%; display: flex;">
          <div   id ="f1_" style="display: none">
-                <div class="topf1">
+                <div class="topf1"><div id="overlay"></div>
                   <img src="imagesandfolder/img1.jpeg"/>
 
                 </div>
-                <div class="bottomf1">
+                <div class="bottomf1"><div id="overlay"></div>
                   <img src="imagesandfolder/img7.jpeg"/>
 
                 </div>
           </div>
            <div id="f2_" style="display: none">
-               <div class="topf2">
+               <div class="topf2"><div id="overlay"></div>
                 <img src="imagesandfolder/img11.jpeg"/>
 
                </div>
-               <div class="bottomf2" >
+               <div class="bottomf2" ><div id="overlay"></div>
                 <img src="imagesandfolder/img8.jpeg"/>
 
                </div>
             </div>
            <div id="f3_" style="display: none">
-              <div class="topf3">
+              <div class="topf3"><div id="overlay"></div>
               <img src="imagesandfolder/img5.jpeg"/>
 
                </div>
-            <div class="bottomf3">
+            <div class="bottomf3"><div id="overlay"></div>
               <img src="imagesandfolder/img6.jpeg"/>
             </div>
-<h1 onclick="SeeMore()" style="display: none;" id="btnSeeMore_2">See less</h1>
+<button onclick="SeeMore()" style="display: none;" id="btnSeeMore_2">Show Less</button>
            </div>
 
    <!-- </div> -->
@@ -334,23 +345,23 @@
 
    <div class="parallax4"></div>
    <div class="five">
-    <h1>PAST STATS</h1>
+    <h1 class="stats_ani">PAST STATS</h1>
      <h2>Here are some of the statistics from CORONA 2019:</h2>
-     <h3>300+</h3>
+     <h3  class="statsNo1_ani">300+</h3>
      <p class="h3a">Participating</p>
      <p class="h3b">colleges</p>
 
-     <h4>50+</h4>
+     <h4  class="statsNo2_ani">50+</h4>
      <p class="h4a">Events</p>
 
-      <h5>125000+</h5>
+      <h5  class="statsNo3_ani">125000+</h5>
       <p class="h5a">Footfall</p>
 
    </div>
    <div class="parallax5"></div>
    <div class="six">
        <div id="sixa">
-         <h1>WHAT PEOPLE SAY ?</h1>
+         <h1 class="mightSay_ani">WHAT PEOPLE SAY ?</h1>
          <h2>Always a pleasure to visit Corona !</h2>
          <h3>-Mr Aman Kumar</h3>
        </div>
@@ -517,9 +528,9 @@
 <script>
 setTimeout(function(){
     $('.loader-bg').fadeToggle();
-},1000);
+},1200);
 </script>
-
+<script src="heading_js.js"></script>
 
     </body>
     </html>

@@ -5,7 +5,7 @@ body, html {
   
   #one
   {
-    margin-top: 40vh;
+    margin-top: 35vh;
      height: 90vh;
      width: 100vw;
      background-color: black;
@@ -30,8 +30,10 @@ body, html {
   color: whitesmoke;
   text-align: left/center;
   font-size: 1.3rem;
- 
-
+}
+#one p::first-letter{
+  font-size: xx-large;
+  color: tomato;
 }
 
   .parallax1 {
@@ -447,8 +449,26 @@ body, html {
 .topf1{
   height: 40vh;
       display: flex;
+      position: relative;
 }
-
+.topf1:hover #overlay {
+  height: 100%;
+}
+.bottomf1:hover #overlay {
+  height: 100%;
+}
+.topf2:hover #overlay {
+  height: 100%;
+}
+.bottomf2:hover #overlay {
+  height: 100%;
+}
+.topf3:hover #overlay {
+  height: 100%;
+}
+.bottomf3:hover #overlay {
+  height: 100%;
+}
 .topf1 img
   {
     height: 40vh;
@@ -456,6 +476,7 @@ body, html {
     background-repeat: no-repeat;
   }
 .bottomf1{
+  position: relative;
   margin-top: 10vh;
   height: 40vh;
   width: 20vw;
@@ -481,6 +502,7 @@ body, html {
     background-repeat: no-repeat;
   }
 .topf2{
+  position: relative;
   height: 40vh;
   width: 20vw;
 }
@@ -488,7 +510,7 @@ body, html {
   margin-top: 10vh;
   height: 40vh;
   width: 33%;
-
+  position: relative;
 }
 .bottomf2 img
   {
@@ -505,6 +527,7 @@ flex: 1;
 
 .topf3{
   height: 40vh;
+  position: relative;
   width: 20vw;
 }
 
@@ -515,6 +538,7 @@ flex: 1;
     background-repeat: no-repeat;
   }
 .bottomf3{
+  position: relative;
   margin-top: 10vh;
   height: 40vh;
   width: 20vw;
